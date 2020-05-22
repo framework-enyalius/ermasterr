@@ -2,7 +2,7 @@
 <!DOCTYPE configuration>
 <?eclipse version="3.2"?>
 <plugin>
-   <extension-point id="popupMenus" name="PopupMenu" schema="schema/PopupMenu.exsd"/>
+   <extension-point id="popupMenus" name="%extension-point.name" schema="schema/PopupMenu.exsd"/>
 
    <extension
          point="org.eclipse.ui.newWizards">
@@ -107,6 +107,49 @@
 			eclipseRuntime="true" />
 			
 	</extension>
+ <extension
+       id="teste"
+       point="org.eclipse.core.runtime.products">
+    <product
+          application="org.eclipse.ui.ide.workbench"
+          name="Ermaster">
+       <property
+             name="appName"
+             value="Ermaster">
+       </property>
+       <property
+             name="aboutImage"
+             value="icons/database2.png">
+       </property>
+    </product>
+ </extension>
+ <extension
+       point="org.eclipse.ui.intro">
+    <intro
+          class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+          id="org.insightech.er.intro">
+    </intro>
+    <introProductBinding
+          introId="org.insightech.er.intro"
+          productId="org.insightech.er.teste">
+    </introProductBinding>
+ </extension>
+ <extension
+       point="org.eclipse.ui.intro.config">
+    <config
+          content="introContent.xml"
+          id="org.insightech.er.introConfigId"
+          introId="org.insightech.er.intro">
+       <presentation
+             home-page-id="root">
+          <implementation
+                kind="html"
+                os="win32,linux,macosx"
+                style="content/shared.css">
+          </implementation>
+       </presentation>
+    </config>
+ </extension>
 	
 	
 	
