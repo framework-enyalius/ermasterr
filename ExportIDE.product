@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Ermaster" uid="org.insightech.er.teste" id="org.insightech.er.teste" application="org.eclipse.ui.ide.workbench" version="1.1.14" useFeatures="false" includeLaunchers="true">
+<product name="Enyalius Ermaster" uid="org.insightech.er.teste" id="org.insightech.er.teste" application="org.eclipse.ui.ide.workbench" version="1.1.14" useFeatures="false" includeLaunchers="true">
 
    <aboutInfo>
-      <image path="/org.insightech.er/icons/database2.png"/>
+      <image path="/org.insightech.er/icons/eny_128.png"/>
+      <text>
+         Eyalius ERMaster is a Fork to project https://github.com/roundrop/ermasterr . Roundrop  is a git version of SVN repo in  http://ermaster.sourceforge.net/
+
+Enyalius is a MVC WEB Framework disponible in http://gitlab.com/enyalius
+By Marcio Bigolin - marcio.bigolinn@gmail.com
+      </text>
    </aboutInfo>
 
    <configIni use="default">
@@ -15,8 +21,11 @@
       </vmArgsMac>
    </launcherArgs>
 
-   <windowImages/>
+   <windowImages i128="/org.insightech.er/icons/eny_128.png" i256="/org.insightech.er/icons/eny_256.png"/>
 
+   <splash
+      location="org.insightech.er"
+      startupProgressRect="5,275,445,15" />
    <launcher name="EnyaliusIDE">
       <linux icon="/org.insightech.er/icons/eny.xpm"/>
       <solaris/>
@@ -25,10 +34,11 @@
       </win>
    </launcher>
 
-   <intro introId="org.insightech.er.intro"/>
+   <intro introId="org.insightech.er.intro1"/>
 
    <vm>
    </vm>
+
 
    <plugins>
       <plugin id="com.google.guava"/>

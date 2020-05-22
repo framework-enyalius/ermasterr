@@ -112,14 +112,30 @@
        point="org.eclipse.core.runtime.products">
     <product
           application="org.eclipse.ui.ide.workbench"
-          name="Ermaster">
+          name="Enyalius Ermaster">
        <property
              name="appName"
-             value="Ermaster">
+             value="Enyalius Ermaster">
        </property>
        <property
              name="aboutImage"
-             value="icons/database2.png">
+             value="icons/eny_128.png">
+       </property>
+       <property
+             name="aboutText"
+             value="Eyalius ERMaster is a Fork to project https://github.com/roundrop/ermasterr . Roundrop  is a git version of SVN repo in  http://ermaster.sourceforge.net/&#x0A;&#x0A;Enyalius is a MVC WEB Framework disponible in http://gitlab.com/enyalius&#x0A;By Marcio Bigolin - marcio.bigolinn@gmail.com">
+       </property>
+       <property
+             name="windowImages"
+             value="icons/eny_128.png,icons/eny_256.png">
+       </property>
+       <property
+             name="startupProgressRect"
+             value="5,275,445,15">
+       </property>
+       <property
+             name="preferenceCustomization"
+             value="plugin_customization.ini">
        </property>
     </product>
  </extension>
@@ -133,6 +149,14 @@
           introId="org.insightech.er.intro"
           productId="org.insightech.er.teste">
     </introProductBinding>
+    <intro
+          class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+          id="org.insightech.er.intro1">
+    </intro>
+    <introProductBinding
+          introId="org.insightech.er.intro1"
+          productId="org.insightech.er.teste">
+    </introProductBinding>
  </extension>
  <extension
        point="org.eclipse.ui.intro.config">
@@ -140,6 +164,19 @@
           content="introContent.xml"
           id="org.insightech.er.introConfigId"
           introId="org.insightech.er.intro">
+       <presentation
+             home-page-id="root">
+          <implementation
+                kind="html"
+                os="win32,linux,macosx"
+                style="content/shared.css">
+          </implementation>
+       </presentation>
+    </config>
+    <config
+          content="introContent.xml"
+          id="org.insightech.er.introConfigId"
+          introId="org.insightech.er.intro1">
        <presentation
              home-page-id="root">
           <implementation
